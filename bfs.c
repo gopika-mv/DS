@@ -6,7 +6,6 @@ void bfs(int graph[MAX][MAX], int visited[MAX], int n, int start) {
     int queue[MAX], front = 0, rear = 0;
     int i;
 
-    // Mark the starting node as visited and enqueue it
     visited[start] = 1;
     queue[rear++] = start;
 
@@ -16,7 +15,6 @@ void bfs(int graph[MAX][MAX], int visited[MAX], int n, int start) {
         int current = queue[front++];
         printf("%d ", current);
 
-        // Check all adjacent vertices
         for (i = 0; i < n; i++) {
             if (graph[current][i] == 1 && visited[i] == 0) {
                 visited[i] = 1;
